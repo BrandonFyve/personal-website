@@ -39,6 +39,7 @@ const BlogListing = () => {
             title={item.title}
             image={item.image}
             index={i}
+            alt={item.alt}
           />
         ))}
       </div>
