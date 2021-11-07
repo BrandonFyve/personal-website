@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import AboutMe from "../components/AboutMe/AboutMe";
 import BlogListing from "../components/BlogListing/BlogListing";
+import ContactMe from "../components/ContactMe/ContactMe";
 import Container from "../components/container/container";
 import NavBar from "../components/NavBar/NavBar";
 
@@ -16,6 +17,8 @@ export default function Home() {
       <NavBar />
       <BlogListing />
       <AboutMe />
+      <hr className="pb-32" />
+      <ContactMe />
     </div>
   );
 }
