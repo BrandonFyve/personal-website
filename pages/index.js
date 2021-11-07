@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import AboutMe from "../components/AboutMe/AboutMe";
 import BlogListing from "../components/BlogListing/BlogListing";
 import Container from "../components/container/container";
 import NavBar from "../components/NavBar/NavBar";
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
       <NavBar />
       <BlogListing />
+      <AboutMe />
     </div>
   );
 }
