@@ -1,6 +1,7 @@
 import React from "react";
 import BlogItem from "../BlogItem/BlogItem";
 import Container from "../container/container";
+import { usePosts } from "../../hooks/usePosts/usePosts";
 
 const placeholderPosts = [
   {
@@ -24,6 +25,8 @@ const placeholderPosts = [
 ];
 
 const BlogListing = () => {
+  const { loading, posts } = usePosts();
+
   return (
     <Container>
       <div className="py-32">
@@ -32,17 +35,21 @@ const BlogListing = () => {
           Helping make the world a better place through quality software
         </h2>
       </div>
-      <div className="grid grid-cols-4 grid-rows-2 gap-x-6 pb-32">
-        {placeholderPosts.map((item, i) => (
-          <BlogItem
-            key={item.id}
-            title={item.title}
-            image={item.image}
-            index={i}
-            alt={item.alt}
-          />
-        ))}
-      </div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <div className="grid grid-cols-4 grid-rows-2 gap-x-6 pb-32">
+          {posts.map((item, i) => (
+            <BlogItem
+              key={item.id}
+              title={item.title}
+              image={item.coverImage.url}
+              index={i}
+              alt={item.alternativeText}
+            />
+          ))}
+        </div>
+      )}
     </Container>
   );
 };

@@ -17,7 +17,7 @@ export default function Home() {
       <NavBar />
       <BlogListing />
       <AboutMe />
-      <hr className="pb-32" />
+      <hr />
       <ContactMe />
     </div>
   );

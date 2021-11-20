@@ -4,7 +4,7 @@ import Image from "next/image";
 const BlogItem = ({ title, image, alt, index }) => {
   return (
     <div
-      className={`flex flex-col ${
+      className={`flex flex-col cursor-pointer ${
         index === 0 ? "col-span-2 row-span-2" : null
       }`}
     >
@@ -15,7 +15,7 @@ const BlogItem = ({ title, image, alt, index }) => {
         height={index === 0 ? 400 : 200}
       />
       <p className="mt-6 text-xl">{title}</p>
-      <div className="flex justify-between items-center pt-6">
+      <div className="flex justify-between items-center pt-3">
         <p className="text-xl font-thin">Read more</p>
         <p className="transform -rotate-45">
           <svg
