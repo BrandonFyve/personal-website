@@ -6,7 +6,7 @@ export const usePosts = () => {
 
   const fetchPosts = async () => {
     setLoading(true);
-    const response = await fetch(`${process.env.STRAPI_URL}/posts`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/posts`);
     const data = await response.json();
     console.log(data);
     setPosts(data);

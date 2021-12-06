@@ -8,12 +8,12 @@ const BlogItem = ({ title, image, alt, index }) => {
         index === 0 ? "col-span-2 row-span-2" : null
       }`}
     >
-      <Image
+      {/* <Image
         src={image}
         alt={alt}
         width={300}
         height={index === 0 ? 400 : 200}
-      />
+      /> */}
       <p className="mt-6 text-xl">{title}</p>
       <div className="flex justify-between items-center pt-3">
         <p className="text-xl font-thin">Read more</p>
